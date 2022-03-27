@@ -1,5 +1,27 @@
 @charset "utf-8"; /* 언어설정 */
 
+/* 스킵 네비게이션 */
+#skip {
+  position: relative;
+}
+
+#skip a {
+  position: absolute;
+  left: 0;
+  top: -35px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #333;
+  line-height: 30px;
+  width: 140px;
+  text-align: center;
+}
+
+#skip a:active,
+#skip a:focus {
+  top: 0;
+}
+
 /* 레이아웃 */
 #wrap {
   width: 100%;
