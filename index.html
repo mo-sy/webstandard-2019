@@ -723,7 +723,30 @@
     ></script>
     <script src="js/slick.min.js"></script>
     <script>
-      // 배너 (슬라이드)
+      // 탭메뉴
+      var $tab_list = $(".tab_menu");
+
+      $tab_list.find("ul ul").hide();
+      $tab_list.find("li.active > ul").show();
+
+      function tabMenu(e) {
+        e.preventDefault();
+        var $this = $(this);
+        //체인
+        $this
+          .next("ul")
+          .show()
+          .parent("li")
+          .addClass("active")
+          .siblings("li")
+          .removeClass("active")
+          .find(">ul")
+          .hide();
+      }
+
+      $tab_list.find("ul>li>a").click(tabMenu).focus(tabMenu);
+
+      // 배너 (슬릭 슬라이드)
       // html 마크업 셋팅 -> css 연동 -> 제이쿼리 연동 -> 제이쿼리 호출
       $(".ban").slick({
         infinite: true,

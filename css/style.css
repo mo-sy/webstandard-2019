@@ -687,7 +687,6 @@
 .tab_menu ul {
   overflow: hidden;
   border-bottom: 1px solid #ccc;
-  border: 0;
 }
 .tab_menu ul li {
   float: left;
